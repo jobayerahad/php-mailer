@@ -1,0 +1,12 @@
+# Composer files
+/vendor
+
+# Environment variables
+.env
+
+# PHPStorm project files
+.idea
+
+# Operating system files
+.DS_Store
+Thumbs.db

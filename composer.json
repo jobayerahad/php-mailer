@@ -1,0 +1,13 @@
+{
+  "require": {
+    "phpmailer/phpmailer": "^6.5",
+    "slim/slim": "^3.12",
+    "vlucas/phpdotenv": "^5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Utilities\\": "src/Utilities",
+      "Handlers\\": "src/Handlers"
+    }
+  }
+}
