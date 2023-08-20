@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\Exception;
 
 class Mailer
 {
-  public static function sendEmail($to, $subject, $text, $html)
+  public static function sendEmail($from, $to, $subject, $text, $html)
   {
     $mail = new PHPMailer(true);
 
@@ -29,7 +29,7 @@ class Mailer
       $mail->Username = getenv('SMTP_USERNAME');
       $mail->Password = getenv('SMTP_PASSWORD');
 
-      $mail->setFrom(getenv('SMTP_FROM_EMAIL'), 'CMS');
+      $mail->setFrom(getenv('SMTP_FROM_EMAIL'), $from);
       $mail->addAddress($to);
       $mail->Subject = $subject;
       $mail->isHTML(true);
@@ -38,7 +38,7 @@ class Mailer
 
       $mail->send();
       return true;
-    } catch (Exception $e) {
+    } catch (Exception) {
       return false;
     }
   }

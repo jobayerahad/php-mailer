@@ -7,7 +7,9 @@
   "autoload": {
     "psr-4": {
       "Utilities\\": "src/Utilities",
-      "Handlers\\": "src/Handlers"
+      "Handlers\\": "src/Handlers",
+      "Middlewares\\": "src/Middlewares",
+      "Validators\\": "src/Validators"
     }
   }
 }
